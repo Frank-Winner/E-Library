@@ -1,0 +1,90 @@
+body {
+  background-color: rgb(210, 227, 250);
+}
+header {
+  padding: 0.2em 0;
+}
+
+header h1 {
+  margin-left: 45%;
+  font-size: 28px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: lighter;
+}
+
+.q {
+  color: rgb(7, 7, 187);
+}
+
+header h5 {
+  font-size: 15px;
+  font-weight: lighter;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 33%;
+}
+
+.container {
+  width: 90%;
+  margin: 2em;
+  display: flex;
+  gap: 2em;
+}
+
+.fa-q {
+  font-size: 19px;
+  color: blue;
+}
+
+.question h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(58, 58, 66);
+}
+
+.question {
+  width: 90%;
+  position: relative;
+}
+
+.question::before {
+  position: absolute;
+  z-index: 2;
+  content: "";
+  color: red;
+  background-color: red;
+  height: 100px;
+  width: 1px;
+  left: -10px;
+}
+
+.fa-a {
+  display: inline-block;
+}
+
+p {
+  display: inline;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  header h5 {
+    margin-left: 26%;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 425px) {
+  .question::before {
+    height: 150px;
+  }
+}
+
+@media (max-width: 320px) {
+  .question::before {
+    height: 200px;
+  }
+}
